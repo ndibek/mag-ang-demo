@@ -1,0 +1,8 @@
+version: '2'
+
+services:
+  angularmvctodo:
+    image: angularmvctodo
+    build:
+      context: ./AngularMVCTODO
+      dockerfile: Dockerfile
