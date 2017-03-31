@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace AngularMVCTODO
+namespace AngularTODO
 {
     public class Startup
     {
@@ -30,6 +30,11 @@ namespace AngularMVCTODO
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.Run(async (context) =>
+            {
+                await context.Response.WriteAsync("Hello World!");
+            });
         }
     }
 }
