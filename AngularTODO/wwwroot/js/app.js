@@ -22,5 +22,4 @@ myApp.controller('TodoCtrl', ['$scope', function ($scope) {
         });
     };
 
-
 }]);
