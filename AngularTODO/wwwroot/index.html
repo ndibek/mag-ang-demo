@@ -5,7 +5,7 @@
 </head>
 <body>
     <div class="todo-wrapper" ng-controller="TodoCtrl">
-        <h2>You've got <span class="emphasis">{{getTotalTodos()}}</span> things to do</h2>
+        <h2>You've got <span class="emphasis">XX</span> things to do</h2>
         <ul>
             <li ng-repeat="todo in todos">
                 <input type="checkbox" ng-model="todo.done" />
@@ -13,11 +13,11 @@
             </li>
         </ul>
         <form>
-            <input class="add-input" placeholder="I need to..." type="text" ng-model="formTodoText" ng-model-instant />
-            <button class="add-btn" ng-click="addTodo()"><h2>Add</h2></button>
+            <input class="add-input" placeholder="I need to..." type="text" />
+            <button class="add-btn"><h2>Add</h2></button>
         </form>
 
-        <button class="clear-btn" ng-click="clearCompleted()">Clear completed</button>
+        <button class="clear-btn">Clear completed</button>
     </div>
     <script src="js/underscore-min.js"></script>
     <script src="js/app.js"></script>
