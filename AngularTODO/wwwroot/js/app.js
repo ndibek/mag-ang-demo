@@ -1,10 +1,12 @@
 ﻿var myApp = angular.module('myApp', []);
-myApp.controller('TodoCtrl', ['$scope', function ($scope) {
+myApp.controller('TodoCtrl', ['$scope', '$http', function ($scope, $http) {
 
-    $scope.todos = [
-        { text: 'Learn AngularJS', done: false },
-        { text: 'Build an app', done: false }
-    ];
+    $scope.todos = [];
+
+    $http.get("api/data")
+        .then(function (response) {
+            $scope.todos = response.data;
+        });
 
     $scope.getTotalTodos = function () {
         return $scope.todos.length;
