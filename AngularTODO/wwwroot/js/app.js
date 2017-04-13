@@ -16,10 +16,4 @@ myApp.controller('TodoCtrl', ['$scope', function ($scope) {
         $scope.formTodoText = '';
     };
 
-    $scope.clearCompleted = function () {
-        $scope.todos = _.filter($scope.todos, function (todo) {
-            return !todo.done;
-        });
-    };
-
 }]);
